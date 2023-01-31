@@ -1,0 +1,642 @@
+/* fonts */
+@font-face {
+  font-family: 'Academy Engraved';
+  src: url(fonts/Academy\ Engraved\ LET\ Fonts.ttf) format('truetype'), url(fonts/Academy\ Engraved\ LET\ Fonts.otf) format('otf'),
+    url(fonts/Academy\ Engraved\ LET\ Fonts.woff) format('woff');
+}
+@font-face {
+  font-family: 'Athelas';
+  src: url(fonts/Athelas-Regular-01.ttf) format('truetype'), url(fonts/Athelas-Regular-01.otf) format('otf'), url(fonts/Athelas-Regular-01.woff) format('woff');
+}
+:root {
+  --transition: all 0.5s ease;
+  --dark-brown: rgb(68, 22, 6);
+  --white: #fff;
+  --creme: rgb(226, 208, 186);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 1rem;
+  line-height: 1.8em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  color: var(--dark-brown);
+}
+a,
+button {
+  font-family: 'Athelas';
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--white);
+}
+button {
+  color: var(--white);
+  border: solid 2px var(--dark-brown);
+  background-color: var(--dark-brown);
+  padding: 0.5rem 1.5rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+button:hover {
+  background: transparent;
+}
+button:hover a {
+  color: var(--dark-brown);
+}
+ul {
+  list-style: none;
+}
+p {
+  font-weight: 400;
+}
+/*** section styling ***/
+section {
+  padding: 4em 2em;
+}
+section h1 {
+  font-size: 4.5rem;
+  margin: 4rem 0;
+  font-family: 'Academy Engraved';
+}
+@media screen and (min-width: 1440px) {
+  section h1 {
+    font-size: 6rem;
+    margin: 5rem 0 6rem 0;
+  }
+}
+@media screen and (min-width: 770px) {
+  .facilities,
+  .rooms {
+    padding: 7vw 10vw;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .facilities,
+  .rooms {
+    padding: 5vw 10vw;
+  }
+}
+/****************** header ******************/
+header {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), url('images/header_img.jpg') center/cover no-repeat;
+}
+
+/****** mobile menu ******/
+header .menu_button {
+  position: absolute;
+  margin-left: calc(100vw - 130px);
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+  font-family: 'Athelas';
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--white);
+  cursor: pointer;
+}
+.bx-menu {
+  font-size: 1.8rem;
+}
+nav {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding: 4em 0 2em 0;
+}
+nav img {
+  width: 12em;
+}
+.mobile_menu {
+  position: fixed;
+  z-index: 10;
+  transform: translateY(-9.75em);
+  background-color: var(--creme);
+  margin-top: -2em;
+  margin-left: 100vw;
+  width: 100vw;
+  height: 100vh;
+  padding: 3em;
+  transition: var(--transition);
+}
+@media screen and (min-width: 430px) {
+  .mobile_menu {
+    margin-left: 100%;
+    width: 18em;
+  }
+}
+.close-btn {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: calc(100% - 1rem);
+  transform: translateY(-3rem);
+  color: var(--dark-brown);
+}
+.close-btn i {
+  font-size: 2.5rem;
+  transition: var(--transition);
+}
+.close-btn i:hover {
+  font-size: 3rem;
+}
+@media screen and (min-width: 430px) {
+  .close-btn {
+    margin-left: 11em;
+  }
+}
+.mobile_menu ul {
+  margin-top: -3em;
+}
+.mobile_menu li {
+  border-bottom: 0.5px solid var(--dark-brown);
+}
+.mobile_menu a {
+  font-size: 1.5rem;
+  line-height: 4em;
+  color: var(--dark-brown);
+  transition: var(--transition);
+}
+.mobile_menu a:hover {
+  margin-left: 2rem;
+}
+.menu ul li {
+  display: none;
+}
+@media screen and (min-width: 1000px) {
+  .mobile_menu {
+    margin-top: 0;
+  }
+}
+
+/****** desktop menu ******/
+@media screen and (min-width: 1000px) {
+  nav {
+    justify-content: space-between;
+    padding: 2em 5em;
+  }
+}
+@media screen and (min-width: 1080px) {
+  header .menu_button {
+    display: none;
+  }
+  .menu ul li {
+    display: inline;
+    padding: 0em 1.5em 0em 1.5em;
+    position: relative;
+  }
+  .menu a::after {
+    position: absolute;
+    display: inline;
+    content: '';
+    width: 0;
+    height: 2px;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--white);
+    transition: var(--transition);
+  }
+  .menu .active::after,
+  .menu a:hover::after {
+    width: 6em;
+    margin-left: 0;
+  }
+}
+
+/****** welcome text ******/
+.welcome_text_wrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3rem;
+}
+@media screen and (min-width: 555px) {
+  .welcome_text_wrapper {
+    height: calc(100vh - 190px);
+    align-items: center;
+    padding-bottom: 3rem;
+  }
+}
+.welcome_text {
+  background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4));
+  padding: 3em;
+  width: min(90%, 50em);
+}
+.welcome_text h1 {
+  text-align: center;
+  margin-bottom: 0.5em;
+  font-size: 3rem;
+  line-height: 1.2em;
+  font-family: 'Athelas';
+}
+.welcome_text p {
+  text-align: center;
+  margin: auto;
+}
+.welcome_text button {
+  margin-left: calc(50% - 65.67px);
+}
+@media screen and (min-width: 1000px) {
+  .welcome_text {
+    margin-top: 2em;
+  }
+}
+
+/****************** main ******************/
+
+/****** facilities ******/
+.facilities h2 {
+  margin-bottom: 0.5em;
+}
+.facilities p {
+  margin-bottom: 3em;
+}
+.facilities i {
+  font-size: 2.5rem;
+}
+.facilities .facility {
+  display: flex;
+  gap: 1.5em;
+}
+.facilities ul {
+  list-style: disc;
+  font-weight: 400;
+  margin-left: 1em;
+  margin-bottom: 3em;
+}
+@media screen and (min-width: 768px) {
+  .facilities-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+  }
+}
+@media screen and (min-width: 1155px) {
+  .facilities-wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/****** book form ******/
+.book {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/book_form_img.jpg') center/cover no-repeat fixed;
+  color: var(--white);
+  padding: 2.5em 3.75em;
+}
+.book-form {
+  display: grid;
+}
+.form-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.book-form input[type='submit'] {
+  cursor: pointer;
+  margin: 1em 0 0 0;
+  font-family: 'Athelas';
+  font-size: 1.5em;
+  padding: 0.5em;
+  background: transparent;
+  color: var(--creme);
+  border: 2px solid var(--creme);
+  transition: var(--transition);
+}
+.book-form input[type='submit']:hover {
+  color: var(--dark-brown);
+  background-color: var(--creme);
+}
+.book-form label,
+.book-form input {
+  font-family: 'Athelas';
+  width: 100%;
+}
+.book-form select {
+  font-family: 'Athelas';
+  min-width: 10em;
+  width: 100%;
+}
+.book-form label {
+  font-size: 1.3rem;
+  font-weight: 600;
+  word-spacing: 0.24em;
+  padding-bottom: 0.38em;
+}
+.book-form input:not(.btn),
+.book-form select {
+  margin: 0.25em 0 1em 0;
+  padding: 0.75em 0.94em;
+  font-size: 1.06em;
+  border: none;
+}
+.book-form input:focus {
+  outline: 0;
+  box-shadow: 0 0 0.44em rgba(0, 0, 0, 0.4);
+}
+@media screen and (min-width: 768px) {
+  .book-form {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5em;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .book-form {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1370px) {
+  .book-form {
+    grid-template-columns: 2fr 2fr 1fr 1fr 1fr 2fr;
+  }
+  .book {
+    height: 40vh;
+    display: grid;
+  }
+}
+@media screen and (max-width: 500px) {
+  .book {
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+  }
+}
+
+/****** Rooms ******/
+.room {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+  border: solid 1px var(--dark-brown);
+}
+.room-image {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 1.5em;
+}
+.room-image img {
+  transition: var(--transition);
+  display: block;
+  width: 100%;
+}
+.room-image:hover img {
+  transform: scale(1.1);
+}
+.room-text {
+  padding: 2rem;
+}
+.room h2 {
+  font-family: 'Athelas';
+  margin-bottom: 0.5em;
+  font-size: 2rem;
+  line-height: 1.2em;
+}
+.room p {
+  margin-bottom: 2rem;
+}
+.room h3 {
+  font-family: 'Athelas';
+  font-size: 1.2rem;
+  margin-bottom: 0.5em;
+}
+.room i {
+  font-size: 1.2rem;
+  color: rgb(128, 218, 11);
+  margin-right: 0.5rem;
+}
+.room span {
+  font-size: 1.6rem;
+  font-family: 'Athelas';
+  margin-right: 0.25em;
+}
+.rate {
+  margin-top: 3em;
+  font-size: 0.7rem;
+}
+button {
+  margin-left: calc(50% - 65px);
+  margin-top: 1rem;
+}
+@media screen and (min-width: 700px) {
+  .rooms-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .room {
+    flex: 0 0 calc(50% - 20px);
+    margin: 10px;
+  }
+  .room-text h2 {
+    font-size: 2.5rem;
+    margin: 0.3em 0 0.8em 0;
+  }
+}
+@media screen and (min-width: 1370px) {
+  .rooms-container {
+    flex-direction: column;
+    gap: 3em;
+  }
+  .room {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 0;
+    margin: 5px 0;
+  }
+  .room-image {
+    width: 50%;
+    margin: 0;
+  }
+  .room-image img {
+    height: 100%;
+  }
+  .room-text {
+    width: 50%;
+    padding: 3em;
+  }
+  .room-text ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .room:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  .room-text h2,
+  .room-text p {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 2040px) {
+  .room-text {
+    padding: 5em;
+  }
+}
+/****** Customers ******/
+.customers {
+  margin-top: 2.5em;
+  padding: 2.5em 1em;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/customers.jpg') center/cover no-repeat fixed;
+}
+.customers h2 {
+  color: var(--white);
+  font-family: 'Athelas';
+  font-size: 4rem;
+  text-align: center;
+  margin: 1em 0;
+}
+@media screen and (min-width: 768px) {
+  .customers h2 {
+    font-size: 5rem;
+    margin-top: 0.5em;
+  }
+}
+.customer {
+  background: var(--white);
+  padding: 2.2em;
+  text-align: center;
+  margin: 3em auto;
+  box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  transition: var(--transition);
+  max-width: 35em;
+}
+.rating {
+  margin: 1em 0;
+  font-size: 1.5rem;
+}
+.customer h3 {
+  font-family: 'Athelas';
+  font-size: 2rem;
+  margin-bottom: 0.3em;
+}
+.customer img {
+  width: 10.6em;
+  border-radius: 50%;
+  margin: 1.6em auto 0.2em auto;
+}
+.customer span {
+  opacity: 0.7;
+  display: block;
+  margin-bottom: 1.5em;
+}
+
+@media screen and (min-width: 992px) {
+  .customers {
+    padding: 2.5em 8vw;
+  }
+  .customer:hover {
+    transform: translateY(-1.2em);
+  }
+  .customers-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.8em;
+  }
+}
+@media screen and (min-width: 1370px) {
+  .customers-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 500px) {
+  .customer p {
+    width: 100%;
+  }
+}
+/****************** footer ******************/
+footer {
+  text-align: center;
+  background-color: var(--dark-brown);
+  color: var(--white);
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+footer h4 {
+  font-family: 'Athelas';
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+}
+footer a {
+  cursor: pointer;
+  line-height: 4em;
+}
+.links li {
+  transition: var(--transition);
+}
+.contact table {
+  margin: 0 auto;
+}
+.contact table:nth-of-type(1) {
+  margin-bottom: 0.5em;
+  transform: translateX(-0.5em);
+}
+.contact i {
+  font-size: 1.5rem;
+  margin-right: 0.5em;
+  cursor: pointer;
+}
+.contact td {
+  vertical-align: top;
+  text-align: left;
+}
+.social {
+  text-align: center;
+  margin-top: 3em;
+}
+.social i {
+  font-size: 3rem;
+  margin: 0.2em;
+  padding: 0.15em;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.social i:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+@media screen and (min-width: 600px) {
+  footer {
+    padding: 4em;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 6em;
+  }
+  .social {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .social,
+  .contact,
+  .links {
+    flex: 1;
+  }
+  .social {
+    margin-top: 0rem;
+  }
+  footer a {
+    line-height: 2em;
+  }
+  footer li:hover {
+    transform: translateX(2em);
+  }
+}
+@media screen and (min-width: 1440px) {
+  footer {
+    padding: 8em 15vw;
+  }
+}

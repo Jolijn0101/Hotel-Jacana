@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- preloaded fonts -->
+    <link rel="preload" as="font" href="fonts/Academy\ Engraved\ LET\ Fonts.ttf" type="font/ttf" crossorigin="anonymous" />
+    <link rel="preload" as="font" href="fonts/Academy\ Engraved\ LET\ Fonts.otf" type="font/otf" crossorigin="anonymous" />
+    <link rel="preload" as="font" href="fonts/Academy\ Engraved\ LET\ Fonts.woff" type="font/woff" crossorigin="anonymous" />
+
+    <link rel="preload" as="font" href="fonts/Athelas-Regular-01.ttf" type="font/ttf" crossorigin="anonymous" />
+    <link rel="preload" as="font" href="fonts/Athelas-Regular-01.otf" type="font/otf" crossorigin="anonymous" />
+    <link rel="preload" as="font" href="fonts/Athelas-Regular-01.woff" type="font/woff" crossorigin="anonymous" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+    <!-- style sheets -->
+    <link rel="stylesheet" href="./style.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- java script -->
+    <script src="script.js" defer></script>
+    <title>Hotel JACANA</title>
+  </head>
+  <body>
+    <header id="header">
+      <div class="menu_button">
+        <span>MENU</span>
+        <i class="bx bx-menu"></i>
+      </div>
+      <nav>
+        <img src="images/Jacana_wit.png" alt="logo" />
+        <div class="menu">
+          <ul>
+            <li><a class="active" href="#header">HOME</a></li>
+            <li><a href="#facilities">FACILITIES</a></li>
+            <li><a href="#rooms">ROOMS</a></li>
+            <li><a href="#customers">CUSTOMERS</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="mobile_menu">
+        <div class="close-btn"><i class="bx bx-x"></i></div>
+        <ul>
+          <li><a class="active" href="#header">HOME</a></li>
+          <li><a href="#facilities">FACILITIES</a></li>
+          <li><a href="#rooms">ROOMS</a></li>
+          <li><a href="#customers">CUSTOMERS</a></li>
+        </ul>
+      </div>
+      <div class="welcome_text_wrapper">
+        <div class="welcome_text">
+          <h1>Welcome to Jacana</h1>
+          <p>
+            Our five star Hotel among the sea in Cape Town is an oase of tranquility and luxury. Book one of our rooms with wonderfull view of the sea. The
+            Jacana restaurant has won multiple awards for their dishes. Highly recommended if you are a foodie.
+          </p>
+          <button><a href="#book">Book now</a></button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="facilities" id="facilities">
+        <h1>Facilities</h1>
+        <div class="facilities-wrapper">
+          <div class="facility">
+            <i class="bx bx-home-heart"></i>
+            <div>
+              <h2>Reception</h2>
+              <ul>
+                <li>open 24 hours</li>
+                <li>luggage storage available</li>
+                <li>check-in from 2:00 pm to 11:59 pm</li>
+                <li>check-out from 11:00 am to 12:00 am</li>
+                <li>our staff speaks south african, english and spanish</li>
+              </ul>
+            </div>
+          </div>
+          <div class="facility">
+            <i class="bx bx-restaurant"></i>
+            <div>
+              <h2>Restaurant</h2>
+              <ul>
+                <li>Restaurant open from 10am to 8pm</li>
+                <li>Special diet menus (on request)</li>
+                <li>Includes Kids Meals</li>
+                <li>Bar open from 19:00 to 23:00</li>
+              </ul>
+            </div>
+          </div>
+          <div class="facility">
+            <i class="bx bx-swim"></i>
+            <div>
+              <h2>Swimming pool</h2>
+              <ul>
+                <li>the pool is open from 08:00 to 20:00</li>
+                <li>children's pool</li>
+                <li>three slides</li>
+                <li>jacuzzi</li>
+              </ul>
+            </div>
+          </div>
+          <div class="facility">
+            <i class="bx bx-lock"></i>
+            <div>
+              <h2>Security</h2>
+              <ul>
+                <li>Fire extinguishers</li>
+                <li>Camera surveillance outside</li>
+                <li>Camera surveillance in common areas</li>
+                <li>Smoke alarm</li>
+                <li>Access with key card</li>
+                <li>24 hour security</li>
+                <li>Safe</li>
+              </ul>
+            </div>
+          </div>
+          <div class="facility">
+            <i class="bx bxs-car-garage"></i>
+            <div>
+              <h2>Parking</h2>
+              <ul>
+                <li>Private parking is possible on site</li>
+                <li>Booking in advance is necessary</li>
+                <li>Parking costs: € 15 per day</li>
+              </ul>
+            </div>
+          </div>
+          <div class="facility">
+            <i class="bx bx-wifi"></i>
+            <div>
+              <h2>Wi-Fi</h2>
+              <ul>
+                <li>Wi-Fi is available</li>
+                <li>available throughout the property</li>
+                <li>this service is free</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="book" id="book">
+        <form class="book-form">
+          <div class="form-item">
+            <label for="checkin-date">Check In Date</label>
+            <input type="date" id="checkin-date" />
+          </div>
+          <div class="form-item">
+            <label for="checkout-date">Check Out Date</label>
+            <input type="date" id="checkout-date" />
+          </div>
+          <div class="form-item">
+            <label for="adult">Adults:</label>
+            <input type="number" min="1" value="1" id="adult" />
+          </div>
+          <div class="form-item">
+            <label for="children">Children:</label>
+            <input type="number" min="1" value="1" id="children" />
+          </div>
+          <div class="form-item">
+            <label for="room">Room:</label>
+            <select id="room" name="room">
+              <option value="Hadeda Ibis">Hadeda Ibis</option>
+              <option value="Marabou Stork">Marabou Stork</option>
+              <option value="Giant Kingfisher">Giant Kingfisher</option>
+            </select>
+          </div>
+          <div class="form-item">
+            <input type="submit" class="btn" value="Book Now" />
+          </div>
+        </form>
+      </section>
+      <section class="rooms" id="rooms">
+        <h1>Rooms</h1>
+        <div class="rooms-container">
+          <article class="room">
+            <div class="room-image">
+              <img src="images/room1.jpg" alt="room image" />
+            </div>
+            <div class="room-text">
+              <h2>Hadeda Ibis</h2>
+              <p>
+                A beautiful double room with terrace overlooking the sea. There is a comfortable double bed and a private bathroom with shower, bath and toilet.
+                The room is located on the ground floor and has its own entrance.
+              </p>
+              <h3>Included</h3>
+              <ul>
+                <li><i class="bx bx-check"></i>television</li>
+                <li><i class="bx bx-check"></i>wardrobe</li>
+                <li><i class="bx bx-check"></i>desk</li>
+                <li><i class="bx bx-check"></i>toilet paper</li>
+                <li><i class="bx bx-check"></i>towels</li>
+                <li><i class="bx bx-check"></i>private bathroom</li>
+                <li><i class="bx bx-check"></i>wc</li>
+                <li><i class="bx bx-check"></i>föhn</li>
+                <li><i class="bx bx-check"></i>douche</li>
+                <li><i class="bx bx-check"></i>bath</li>
+              </ul>
+              <p class="rate"><span>€99.00</span> per Night</p>
+              <button type="button" class="btn"><a href="#book">Book now</a></button>
+            </div>
+          </article>
+          <article class="room">
+            <div class="room-image">
+              <img src="images/header_img.jpg" alt="room image" />
+            </div>
+            <div class="room-text">
+              <h2>Marabou Stork</h2>
+              <p>
+                A restful double room with terrace overlooking the sea. There is a comfortable double bed with mosquito net and a private bathroom with shower
+                and toilet.
+              </p>
+              <h3>Included</h3>
+              <ul>
+                <li><i class="bx bx-check"></i>television</li>
+                <li><i class="bx bx-check"></i>wardrobe</li>
+                <li><i class="bx bx-check"></i>desk</li>
+                <li><i class="bx bx-check"></i>toilet paper</li>
+                <li><i class="bx bx-check"></i>towels</li>
+                <li><i class="bx bx-check"></i>private bathroom</li>
+                <li><i class="bx bx-check"></i>wc</li>
+                <li><i class="bx bx-check"></i>föhn</li>
+                <li><i class="bx bx-check"></i>douche</li>
+              </ul>
+              <p class="rate"><span>€97.00</span> per Night</p>
+              <button type="button" class="btn"><a href="#book">Book now</a></button>
+            </div>
+          </article>
+          <article class="room">
+            <div class="room-image">
+              <img src="images/room2.jpg" alt="room image" />
+            </div>
+            <div class="room-text">
+              <h2>Giant Kingfisher</h2>
+              <p>
+                A luxurious double room with terrace overlooking the sea. There is a comfortable double bed and a private bathroom with shower, bath and toilet.
+                There is also a private sauna in the room.
+              </p>
+              <h3>Included</h3>
+              <ul>
+                <li><i class="bx bx-check"></i>television</li>
+                <li><i class="bx bx-check"></i>wardrobe</li>
+                <li><i class="bx bx-check"></i>desk</li>
+                <li><i class="bx bx-check"></i>toilet paper</li>
+                <li><i class="bx bx-check"></i>towels</li>
+                <li><i class="bx bx-check"></i>private bathroom</li>
+                <li><i class="bx bx-check"></i>wc</li>
+                <li><i class="bx bx-check"></i>föhn</li>
+                <li><i class="bx bx-check"></i>douche</li>
+                <li><i class="bx bx-check"></i>bath</li>
+                <li><i class="bx bx-check"></i>sauna</li>
+              </ul>
+              <p class="rate"><span>€110.00</span> per Night</p>
+              <button type="button" class="btn"><a href="#book">Book now</a></button>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="customers" id="customers">
+        <div>
+          <div class="title">
+            <h2>Customers</h2>
+          </div>
+          <div class="customers-container">
+            <div class="customer">
+              <img src="images/cus1.jpg" alt="customer img" />
+              <span>Emma, Germany</span>
+              <h3>We Loved it</h3>
+              <p>We celebrated a week's holiday at Jacana. Nice staff. The room was tidy. The pool was great for the kids. We'll be back for sure.</p>
+              <div class="rating">
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+              </div>
+            </div>
+            <div class="customer">
+              <img src="images/cus2.jpg" alt="customer img" />
+              <span>Brandon, USA</span>
+              <h3>Comfortable stay</h3>
+              <p>
+                For the summer I had booked the Marabou Stork room. It was a great holiday and I have not once been bothered by mosquitoes while sleeping
+                through the mosquito net. The view from the room was beautiful.
+              </p>
+              <div class="rating">
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+              </div>
+            </div>
+            <div class="customer">
+              <img src="images/cus3.jpg" alt="customer img" />
+              <span>Pieter, United Kingdom</span>
+              <h3>Nice place</h3>
+              <p>Booked a weekend at Jacana. The staff are nice. The hotel looks beautiful. There is much to see in the area.</p>
+              <div class="rating">
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="links">
+        <h4>Links</h4>
+        <ul>
+          <li><a class="active" href="#header">HOME</a></li>
+          <li><a href="#facilities">FACILITIES</a></li>
+          <li><a href="#rooms">ROOMS</a></li>
+          <li><a href="#customers">CUSTOMERS</a></li>
+        </ul>
+      </div>
+      <div class="contact">
+        <h4>Contact</h4>
+        <table>
+          <tr>
+            <td><i class="bx bxs-phone"></i></td>
+            <td><p>00 26461 234 2089</p></td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <td><i class="bx bx-map-alt"></i></td>
+            <td>
+              <p>
+                234 Church Street <br />
+                12 Lagoon Gate Drive<br />
+                Lagoon Beach<br />
+                Cape Town<br />
+                7441<br />
+                South Africa
+              </p>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="social">
+        <i class="bx bxl-twitter"></i>
+        <i class="bx bxl-facebook"></i>
+        <i class="bx bxl-instagram"></i>
+      </div>
+    </footer>
+  </body>
+</html>
