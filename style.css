@@ -65,6 +65,7 @@ section h1 {
   font-size: 4.5rem;
   margin: 4rem 0;
   font-family: 'Academy Engraved';
+  font-weight: 300;
 }
 @media screen and (min-width: 1440px) {
   section h1 {
@@ -299,6 +300,7 @@ nav img {
   display: grid;
 }
 .form-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -328,6 +330,13 @@ nav img {
   min-width: 10em;
   width: 100%;
 }
+.form-item i {
+  position: absolute;
+  z-index: 100;
+  color: black;
+  margin-left: calc(100% - 2em);
+  margin-top: 1.3em;
+}
 .book-form label {
   font-size: 1.3rem;
   font-weight: 600;
@@ -336,10 +345,12 @@ nav img {
 }
 .book-form input:not(.btn),
 .book-form select {
+  -webkit-appearance: none;
   margin: 0.25em 0 1em 0;
   padding: 0.75em 0.94em;
   font-size: 1.06em;
   border: none;
+  border-radius: 0;
 }
 .book-form input:focus {
   outline: 0;
