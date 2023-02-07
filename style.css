@@ -88,7 +88,50 @@ section h1 {
 /****************** header ******************/
 header {
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), url('images/header_img.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
+    url('https://ik.imagekit.io/jolijn/tr:w-425,h-1062,c-maintain_ratio/jacana_hotel/room2.jpg') center/cover no-repeat;
+}
+
+/**** media query header background ****/
+/** mobile **/
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  header {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
+      url('https://ik.imagekit.io/jolijn/tr:w-840,h-2100,c-maintain_ratio/jacana_hotel/room2.jpg') center/cover no-repeat;
+  }
+}
+/** ipad **/
+@media screen and (min-width: 425px) {
+  header {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
+      url('https://ik.imagekit.io/jolijn/tr:w-768,h-1536,c-maintain_ratio/jacana_hotel/room2.jpg') center/cover no-repeat;
+  }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    header {
+      background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
+        url('https://ik.imagekit.io/jolijn/tr:w-1536,h-3072,c-maintain_ratio/jacana_hotel/room2.jpg') center/cover no-repeat;
+    }
+  }
+}
+/** laptop **/
+@media screen and (min-width: 1024px) {
+  header {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
+      url('https://ik.imagekit.io/jolijn/tr:w-1024/jacana_hotel/room2.jpg') center/cover no-repeat;
+  }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    header {
+      background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
+        url('https://ik.imagekit.io/jolijn/tr:w-2048/jacana_hotel/room2.jpg') center/cover no-repeat;
+    }
+  }
+}
+/** large screens **/
+@media screen and (min-width: 2500px) {
+  header {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
+      url('https://ik.imagekit.io/jolijn/tr:w-2500/jacana_hotel/room2.jpg') center/cover no-repeat;
+  }
 }
 
 /****** mobile menu ******/
@@ -292,10 +335,53 @@ nav img {
 
 /****** book form ******/
 .book {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/book_form_img.jpg') center/cover no-repeat fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://ik.imagekit.io/jolijn/tr:w-425,h-1593,c-maintain_ratio/jacana_hotel/book_form_img.jpg') center/cover no-repeat fixed;
   color: var(--white);
   padding: 2.5em 3.75em;
 }
+/**** media query book form background ****/
+/** mobile **/
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .book {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('https://ik.imagekit.io/jolijn/tr:w-850,h-3188,c-maintain_ratio/jacana_hotel/book_form_img.jpg') center/cover no-repeat fixed;
+  }
+}
+/** ipad **/
+@media screen and (min-width: 425px) {
+  .book {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('https://ik.imagekit.io/jolijn/tr:w-768,h-768,c-maintain_ratio/jacana_hotel/book_form_img.jpg') center/cover no-repeat fixed;
+  }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .book {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('https://ik.imagekit.io/jolijn/tr:w-1536,h-1536,c-maintain_ratio/jacana_hotel/book_form_img.jpg') center/cover no-repeat fixed;
+    }
+  }
+}
+/** laptop **/
+@media screen and (min-width: 1024px) {
+  .book {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('https://ik.imagekit.io/jolijn/tr:w-1024/jacana_hotel/book_form_img.jpg') center/cover no-repeat fixed;
+  }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .book {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('https://ik.imagekit.io/jolijn/tr:w-2048/jacana_hotel/book_form_img.jpg') center/cover no-repeat fixed;
+    }
+  }
+}
+/** large screens **/
+@media screen and (min-width: 2500px) {
+  .book {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('https://ik.imagekit.io/jolijn/tr:w-2500/jacana_hotel/book_form_img.jpg') center/cover no-repeat fixed;
+  }
+}
+
 .book-form {
   display: grid;
 }
@@ -399,6 +485,8 @@ nav img {
   transition: var(--transition);
   display: block;
   width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 .room-image:hover img {
   transform: scale(1.1);
@@ -495,8 +583,51 @@ button {
 .customers {
   margin-top: 2.5em;
   padding: 2.5em 1em;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/customers.jpg') center/cover no-repeat fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://ik.imagekit.io/jolijn/tr:w-425,h-1700,c-maintain_ratio/jacana_hotel/customers.jpg') center/cover no-repeat fixed;
 }
+/**** media query Customers background ****/
+/** mobile **/
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .customers {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('https://ik.imagekit.io/jolijn/tr:w-850,h-2500,c-maintain_ratio/jacana_hotel/customers.jpg') center/cover no-repeat fixed;
+  }
+}
+/** ipad **/
+@media screen and (min-width: 425px) {
+  .customers {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('https://ik.imagekit.io/jolijn/tr:w-768,h-1920,c-maintain_ratio/jacana_hotel/customers.jpg') center/cover no-repeat fixed;
+  }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .customers {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('https://ik.imagekit.io/jolijn/tr:w-1536,h-3840,c-maintain_ratio/jacana_hotel/customers.jpg') center/cover no-repeat fixed;
+    }
+  }
+}
+/** laptop **/
+@media screen and (min-width: 1024px) {
+  .customers {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('https://ik.imagekit.io/jolijn/tr:w-1024/jacana_hotel/customers.jpg') center/cover no-repeat fixed;
+  }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .customers {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('https://ik.imagekit.io/jolijn/tr:w-2048/jacana_hotel/customers.jpg') center/cover no-repeat fixed;
+    }
+  }
+}
+/** large screens **/
+@media screen and (min-width: 2500px) {
+  .customers {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('https://ik.imagekit.io/jolijn/tr:w-2500/jacana_hotel/customers.jpg') center/cover no-repeat fixed;
+  }
+}
+
 .customers h2 {
   color: var(--white);
   font-family: 'Athelas';
